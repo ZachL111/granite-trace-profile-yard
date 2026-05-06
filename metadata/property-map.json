@@ -1,0 +1,28 @@
+{
+  "repo": "granite-trace-profile-yard",
+  "language": "Scala",
+  "category": "Observability",
+  "goal": "Package a Scala local lab for profile analysis with fixture event logs, golden state snapshots, and documented operating limits.",
+  "weights": {
+    "signal": 2,
+    "slack": 1,
+    "confidence": 2,
+    "drag": 4
+  },
+  "thresholds": {
+    "ship": 205,
+    "watch": 129
+  },
+  "properties": [
+    "raising signal cannot reduce score",
+    "raising drag cannot improve score",
+    "lane labels must match configured thresholds",
+    "golden fixture ids must remain unique"
+  ],
+  "fixture_files": [
+    "fixtures/golden/scoreboard.csv",
+    "fixtures/golden/lane-matrix.csv",
+    "fixtures/fuzz/mutations.csv",
+    "fixtures/fuzz/boundary-cases.jsonl"
+  ]
+}
